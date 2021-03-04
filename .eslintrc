@@ -27,8 +27,16 @@
     "no-func-assign": "off",
     "react-hooks/exhaustive-deps": "off",
     "complexity": ["error", 6],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling"],
+        "newlines-between": "always"
+      }
+    ]
   },
+  "plugins": ["import"],
   "globals": {
     "mq": true,
     "css": true

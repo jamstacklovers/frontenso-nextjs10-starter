@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import Layout from '../components/layout';
+import Container from '../components/container';
 
 export default function Home() {
   return (
@@ -10,9 +11,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+      <Container>
+        <h1>
+          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        </h1>
+      </Container>
     </Layout>
   );
 }

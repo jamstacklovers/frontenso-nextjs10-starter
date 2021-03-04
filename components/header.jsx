@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { styled } from '@linaria/react';
 
+import Container from './container';
+
 const StyledHeader = styled.header`
   color: #fff;
   background-color: lightslategray;
@@ -10,7 +12,9 @@ const StyledHeader = styled.header`
 
 const Header = () => (
   <StyledHeader>
-    <Link href="/">Header Example</Link>
+    <Container>
+      <Link href="/">Header Example</Link>
+    </Container>
   </StyledHeader>
 );
 

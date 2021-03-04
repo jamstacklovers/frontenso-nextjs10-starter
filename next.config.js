@@ -1,7 +1,8 @@
-const withCSS = require('@zeit/next-css');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const withImages = require('next-images');
 const path = require('path');
+
+const withCSS = require('@zeit/next-css');
+const withImages = require('next-images');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const withPWA = require('next-pwa');
 
 const config = withImages(
