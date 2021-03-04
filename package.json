@@ -5,12 +5,22 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "next dev",
-    "build": "next build && next export"
+    "build": "next build && next export",
+    "format": "pretty-quick --staged",
+    "lint:css": "stylelint \"./**/*.{jsx,js}\"",
+    "lint:js": "eslint --max-warnings 0 \"./**/*.{jsx,js}\"",
+    "validate": "npm-run-all --parallel format lint:css lint:js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run validate"
+    }
   },
   "dependencies": {
     "@linaria/core": "^3.0.0-beta.1",
     "@linaria/react": "^3.0.0-beta.1",
     "@linaria/stylelint": "^3.0.0-beta.1",
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.21.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
