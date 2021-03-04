@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "@linaria/stylelint"
+  ],
+  "rules" : {
+    "property-no-vendor-prefix": null,
+    "no-descending-specificity": null,
+    "rule-empty-line-before": [
+      "always-multi-line",
+      { "except": ["first-nested"] }
+    ]
+  }
+}
