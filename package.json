@@ -5,11 +5,12 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "npm run validate:ci && next build && next export",
     "format": "pretty-quick --staged",
     "lint:css": "stylelint \"./**/*.{jsx,js}\"",
     "lint:js": "eslint --max-warnings 0 \"./**/*.{jsx,js}\"",
-    "validate": "npm-run-all --parallel format lint:css lint:js"
+    "validate": "npm-run-all --parallel format lint:css lint:js",
+    "validate:ci": "npm-run-all --parallel lint:css lint:js"
   },
   "husky": {
     "hooks": {
