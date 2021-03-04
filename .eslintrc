@@ -34,7 +34,8 @@
         "groups": ["builtin", "external", "internal", "parent", "sibling"],
         "newlines-between": "always"
       }
-    ]
+    ],
+    "react/self-closing-comp": "error"
   },
   "plugins": ["import"],
   "globals": {
