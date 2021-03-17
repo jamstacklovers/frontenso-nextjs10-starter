@@ -29,35 +29,13 @@ const config = withImages(
       config.optimization.minimizer.push(new OptimizeCSSAssetsPlugin({}));
 
       config.module.rules.push({
+        // eslint-disable-next-line
         test: /\.svg$/,
-        use: [
-          {
-            loader: 'babel-loader',
-          },
-          {
-            loader: 'react-svg-loader',
-            options: {
-              jsx: true,
-              svgo: {
-                plugins: [
-                  {
-                    cleanupIDs: {
-                      prefix: {
-                        toString() {
-                          this.counter = this.counter || 0;
-                          return `id-${this.counter++}`;
-                        },
-                      },
-                    },
-                  },
-                  {
-                    removeTitle: true,
-                  },
-                ],
-              },
-            },
-          },
-        ],
+        issuer: {
+          // eslint-disable-next-line
+          test: /\.(js|ts)x?$/,
+        },
+        use: ['@svgr/webpack'],
       });
 
       return config;
