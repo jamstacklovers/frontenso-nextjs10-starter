@@ -1,0 +1,9 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: transparent;
+  border-top: none;
+  border-bottom: none;
+}

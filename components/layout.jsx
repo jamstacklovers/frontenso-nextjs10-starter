@@ -1,7 +1,9 @@
+import React from 'react';
+
 import Header from './header';
 
 function Layout(props) {
-  let { children } = props;
+  const { children } = props;
 
   return (
     <>

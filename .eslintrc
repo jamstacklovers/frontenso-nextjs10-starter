@@ -7,37 +7,18 @@
     "node": true
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:sonarjs/recommended",
+    "@frontenso/javascript",
+    "@frontenso/react"
   ],
   "rules": {
-    "no-unused-vars": ["error", { "varsIgnorePattern": "^_" }],
-    "no-undef": 1,
-    "no-console": [
-      "warn",
-      {
-        "allow": ["warn", "error", "info"]
-      }
-    ],
     "no-class-assign": "off",
-    "import/no-named-as-default": "off",
-    "import/prefer-default-export": "off",
-    "react/prop-types": "off",
     "no-func-assign": "off",
-    "react-hooks/exhaustive-deps": "off",
-    "complexity": ["error", 6],
-    "react/react-in-jsx-scope": "off",
-    "import/order": [
-      "error",
-      {
-        "groups": ["builtin", "external", "internal", "parent", "sibling"],
-        "newlines-between": "always"
-      }
-    ],
-    "react/self-closing-comp": "error"
+    "react/prop-types": "off",
+    "react/self-closing-comp": "error",
+    "max-len": "off"
   },
-  "plugins": ["import"],
+  "plugins": ["sonarjs"],
   "globals": {
     "mq": true,
     "css": true
